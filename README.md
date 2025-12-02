@@ -82,7 +82,6 @@ Lumos-EDR/
 
 ## Disclaimer 
 
-```bash
 This tool is developed for educational and defensive purposes only. The author is not responsible for any misuse. Always test on isolated environments.
-```
+
 
