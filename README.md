@@ -40,3 +40,49 @@ Run the main engine to start the threat hunting process:
 
 ```bash
 python main.py
+```
+
+## Example Output 
+
+```bash
+==========================================
+   LUMOS EDR - THREAT HUNTER v1.0
+==========================================
+
+[-] Initializing modules...
+[-] Scanning running processes...
+[+] Found 316 active processes.
+
+[-] Starting Threat Analysis (VirusTotal)...
+------------------------------------------------------------
+PROCESS NAME              PID        STATUS          SCORE
+------------------------------------------------------------
+steamwebhelper.exe        464        CLEAN ✅        0/76
+unknown_miner.exe         1337       MALICIOUS 🚨    58/76
+smss.exe                  824        CLEAN ✅        0/76
+------------------------------------------------------------
+
+[+] Scan Completed. Results saved to database.
+```
+
+## Project Structure
+
+```bash
+Lumos-EDR/
+│
+├── main.py                 # Main execution engine
+├── config.py               # API keys and settings
+├── requirements.txt        # Dependencies
+│
+└── core/                   # Core Modules
+    ├── database.py         # SQLite Manager
+    ├── process_monitor.py  # System Process Scanner
+    └── threat_intel.py     # VirusTotal API Integration
+```
+
+## Disclaimer 
+
+```bash
+This tool is developed for educational and defensive purposes only. The author is not responsible for any misuse. Always test on isolated environments.
+```
+
